@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #FE83FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #194eb9;
+}
+
+a {
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.navbar {
+    display: flex;
+    gap: 24px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+a:hover, .active {
+    background-color: #FE83FF;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+#purple, #moon {
+    mix-blend-mode: screen;
+}
+
+.hero p {
+    position: absolute;
+    top: 50%;
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    line-height: 1.1;
+    text-shadow: 8px 8px 6px black;
+    transform: translateY(-50%);
+}
+
+.hero p span {
+    font-weight: 300;
+    font-size: 48px;
+}
+
+main {
+    position: relative;
+    padding: 92px 48px;
+    background-color: black;
+}
+
+main h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(25% - 40px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.product p {
+    color: #FE83FF;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product:hover h3 {
+    color: #FE83FF;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.product-list {
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+.product-page {
+    padding: 92px 48px;
+}
+
+.product-container {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 48px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.product-images {
+    position: relative;
+    width: 50%;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.product-details {
+    width: 50%;
+}
+
+.product-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #FE83FF;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.buy-now {
+    padding: 12px 24px;
+    background-color: #FE83FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #d473d6;
+    transform: scale(1.05);
+}
+
+.related-products {
+    margin-top: 48px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.related-products h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-list .product {
+    width: calc(25% - 10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-list .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.reviews {
+    margin-top: 48px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.review {
+    background-color: #1a1a1a;
+    padding: 16px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.review h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.review p {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-page, .services-page, .contact-page {
+    padding: 92px 48px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-section, .services-section, .contact-section {
+    background-color: #1a1a1a;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-section h2, .services-section h2, .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #FE83FF;
+}
+
+.about-section p, .services-section p, .contact-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.service {
+    margin-bottom: 24px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #FE83FF;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #FE83FF;
+    background-color: #333;
+    color: white;
+}
+
+button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #FE83FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d473d6;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

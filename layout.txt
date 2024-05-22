@@ -1,0 +1,13 @@
+- Navbar
+    - logo
+    - Menu
+        - Home
+        - About
+        - Contact
+        - Services
+
+    - Hero
+      - Wellcome to Moon City
+      images
+- Heading
+- content

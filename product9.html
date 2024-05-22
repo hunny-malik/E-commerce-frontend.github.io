@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Name</h1>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main class="product-page">
+        <div class="product-container">
+            <div class="product-images">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="./images/blackarch.jpeg" alt="Product Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/blackarch.jpeg" alt="Product Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/blackarch.jpeg" alt="Product Image 3">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h2>Product Name</h2>
+                <p class="price">$50.00</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+        <section class="related-products">
+            <h2>Related Products</h2>
+            <div class="product-list">
+                <div class="product">
+                    <a href="product1.html"><img src="./images/blackarch.jpeg" alt="Related Product 1"></a>
+                    <a href="product1.html"><h3>Demo1</h3></a>
+                    <p>$50.00</p>
+                </div>
+                <div class="product">
+                    <a href="product2.html"><img src="./images/blackarch.jpeg" alt="Related Product 2"></a>
+                    <a href="product2.html"><h3>Demo2</h3></a>
+                    <p>$15.00</p>
+                </div>
+                <div class="product">
+                    <a href="product3.html"><img src="./images/blackarch.jpeg" alt="Related Product 3"></a>
+                    <a href="product3.html"><h3>Demo3</h3></a>
+                    <p>$20.00</p>
+                </div>
+                <div class="product">
+                    <a href="product4.html"><img src="./images/blackarch.jpeg" alt="Related Product 4"></a>
+                    <a href="product4.html"><h3>Demo4</h3></a>
+                    <p>$25.00</p>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <h3>Review Title</h3>
+                <p>Reviewer Name</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="review">
+                <h3>Review Title</h3>
+                <p>Reviewer Name</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
